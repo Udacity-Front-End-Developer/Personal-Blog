@@ -1,0 +1,197 @@
+/* ========SIDE BAR======== */
+
+/* Large Screen */
+@media (min-width: 1401px) {
+	.sidebar {
+		grid-column: 3 / span 1;
+		grid-row: 2 / span 2;
+		margin-top: 2em;
+	}
+}
+
+/* Medium Screen */
+@media (min-width: 800px) and (max-width: 1400px) {
+	.sidebar {
+		grid-area: sb;
+	}
+}
+
+/* Small Screen */
+@media (max-width: 799px) {
+	.sidebar {
+		visibility: hidden;
+		position: absolute;
+	}
+}
+
+.profile-img {
+	max-width: 100%;
+	margin-top: 0.5em;
+}
+
+.bio {
+	font-family: 'Poppins';
+	color: rgb(115, 115, 115);
+	text-justify: auto;
+}
+
+.sidebar > * {
+	margin: 0.5em;
+}
+
+.sidebar {
+	/* border: 1px solid blue; */
+	background-color: #fefefe;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 1px 2px 5px rgb(187, 187, 187);
+}
+
+.sb-card {
+	display: flex;
+	cursor: pointer;
+	/* border: 1px solid red; */
+	margin-top: 0.5em;
+}
+
+.sb-card-detail {
+	/* border: 1px solid blue; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.sb-card-img {
+	background-image: url(../img/leo.jpg);
+	max-width: 200px;
+	width: 50%;
+	height: 100px;
+	background-size: cover;
+}
+
+.social-media-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.social-group-btns {
+	margin-top: 0.5em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.social {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-size: cover;
+}
+
+#fb {
+	background-image: url(../icons/facebook.svg);
+}
+
+#twt {
+	background-image: url(../icons/twitter.svg);
+}
+
+#inst {
+	background-image: url(../icons/instagram.svg);
+}
+
+#yt {
+	background-image: url(../icons/youtube.svg);
+}
+
+.subscribe-btn {
+	width: 100%;
+	align-self: center;
+}
+
+#txt {
+	color: white;
+}
+/* Inspired by w3schools' CSS Buttons and unicode-table.com */
+#sub {
+	width: 100%;
+	margin-top: 0.5em;
+	transition: all 0.5s;
+	font-size: 1.1em;
+	font-size: larger;
+}
+
+#sub #txt {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#sub #txt:after {
+	content: '\1F44D';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -1em;
+	transition: 0.5s;
+}
+
+#sub:hover #txt {
+	padding-right: 1em;
+}
+
+#sub:hover #txt:after {
+	opacity: 1;
+	right: 0;
+}
+
+/* In order to achieve a pop effect, I found that I can make use of the pseudoclass :target */
+
+.overlay {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: opacity 0.5;
+	visibility: hidden;
+	opacity: 0;
+}
+
+/* Clicking the link with the href of {#popup} will acitvate the overlay and makes it visible */
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Subscribe form */
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fefefe;
+	width: 30%;
+	margin: 14em auto;
+	padding: 2em;
+	border-radius: 1em;
+}
+
+.form .title {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.form input {
+	margin-bottom: 1em;
+}
+
+.form a {
+	padding: 0.5em;
+	font-weight: bold;
+	border-radius: 0.2em;
+	cursor: pointer;
+	background-color: #4caf50;
+	color: white;
+}

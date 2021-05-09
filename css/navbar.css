@@ -1,0 +1,115 @@
+/* ========NavBar======== */
+/* NAVBAR ICONS */
+.nav-icon {
+	vertical-align: bottom;
+}
+/* END; */
+
+/* LINKS */
+.nav-link {
+	font-size: 0.8em;
+	text-decoration: none;
+	color: #5c5c5c;
+	transition: font-size 0.5s ease-out;
+}
+/* END; */
+
+.nav-link:hover {
+	border-bottom: 2px solid #a270ca;
+	color: rgb(25, 25, 25);
+	font-size: 1em;
+}
+
+.home-nav ul {
+	list-style: none;
+}
+
+/* HANDLES THE STYLE OF THE CURRENT LINK IN THE NAVBAR */
+.track {
+	color: #a270ca;
+	border-bottom: 2px solid #a270ca;
+	pointer-events: none;
+	font-size: 1em;
+}
+/* END; */
+
+/* Large Screen */
+/* if screen is large, navbar jumps from top to the left side */
+@media (min-width: 1401px) {
+	.nav-container {
+		grid-column: 1 / 2;
+		grid-row: 1 / span 4;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		box-shadow: 1px 2px 5px #bbb;
+	}
+
+	.navbar {
+		order: 1;
+		display: flex;
+		flex-direction: column;
+		font-size: 1.6em;
+		justify-content: space-between;
+		height: 5vw;
+		margin-top: 2rem;
+		position: fixed;
+	}
+
+	.nav-item {
+		margin-top: 2em;
+	}
+}
+
+/* Medium Screen */
+@media (min-width: 800px) and (max-width: 1400px) {
+	.nav-container {
+		grid-area: nv;
+		z-index: 2;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+
+	.navbar {
+		box-shadow: 1px 2px 5px #bbb;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 3vw;
+		width: 90%;
+		position: fixed;
+		background-color: #fefefe;
+	}
+
+	.nav-icon {
+		display: none !important; /* didn't work without the !important rule, need to dig further on why*/
+	}
+}
+
+@media (max-width: 799px) {
+	.nav-container {
+		grid-area: nv;
+		z-index: 2;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+
+	.navbar {
+		box-shadow: 1px 2px 5px #bbb;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 3vw;
+		width: 90%;
+		position: fixed;
+		background-color: #fefefe;
+	}
+
+	.nav-icon {
+		display: none !important; /* didn't work without the !important rule, need to dig further on why*/
+	}
+}

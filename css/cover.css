@@ -1,0 +1,39 @@
+/* BLOG COVER */
+.cover {
+	height: 20rem;
+	margin-bottom: 4em;
+	z-index: 1;
+}
+
+.cover-container {
+	background-image: url(../img/cover.png);
+	background-size: cover;
+	background-position: bottom;
+	height: 25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 3em;
+	margin-bottom: 2rem;
+	color: #eee;
+	text-shadow: 1px 2px 10px black;
+}
+
+#slogan {
+	font-size: small;
+}
+
+#title {
+	font-size: larger;
+}
+
+@media (max-width: 799px) {
+	.cover-container {
+		color: black !important;
+		background-image: none !important;
+		font-size: 2em !important;
+		text-shadow: none !important;
+	}
+	/* I couldn't figure out a way to add social buttons for this size under the cover title. */
+}

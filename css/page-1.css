@@ -1,0 +1,233 @@
+@import 'navbar.css';
+@import 'sidebar.css';
+@import 'cover.css';
+@import 'typography.css';
+@import 'buttons.css';
+
+/* ========GLOBAL SETTINGS======== */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #eee;
+	font-size: 1em;
+}
+
+a {
+	color: #a270ca;
+	text-decoration: none;
+}
+
+.footer {
+	background-color: black;
+	color: white;
+}
+
+.post-img-container {
+	background-image: url(../img/post-1.jpg);
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	margin-top: 0.2em;
+	/* justify-self: center; */
+}
+
+.post-img {
+	height: 300px;
+	display: block;
+	margin: auto;
+	/* width: 100%; */
+}
+
+.related-posts-container {
+	margin: 2em 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.related-post-card {
+	box-shadow: 1px 2px 5px #bbb;
+	display: flex;
+	margin: 0.5em 0;
+	width: 20rem;
+	height: 100px;
+}
+
+.related-post-card-img {
+	background-image: url(../img/leo.jpg);
+	width: 400px;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.related-post-card-text {
+	padding: 1em;
+	border: 1px solid blue;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.related-post-navigation {
+	display: flex;
+	width: 100px;
+}
+
+/* Small Screen */
+@media (max-width: 799px) {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto auto 1fr auto 1fr auto 1fr;
+		grid-template-areas:
+			'nv nv nv nv'
+			'cover cover cover cover'
+			'hd hd hd sb'
+			'. . . sb'
+			'txt txt txt sb'
+			'rl rl rl rl'
+			'ft ft ft ft';
+		width: 90%;
+		height: 100vh;
+		margin: auto;
+	}
+
+	.cover {
+		grid-area: cover;
+	}
+
+	.post-header {
+		grid-area: hd;
+		height: 100%;
+	}
+
+	.content {
+		grid-area: txt;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		margin: 0.2em 2em 0em 2em;
+		padding: 1em;
+		background-color: #fefefe;
+		box-shadow: 1px 2px 5px #bbb;
+		/* border: 1px solid red; */
+	}
+
+	.related-posts-container {
+		grid-area: rl;
+	}
+
+	.footer {
+		grid-area: ft;
+	}
+}
+
+/* Medium Screen */
+@media (min-width: 800px) and (max-width: 1400px) {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto auto 1fr auto 1fr auto 1fr;
+		grid-template-areas:
+			'nv nv nv nv'
+			'cover cover cover cover'
+			'hd hd hd sb'
+			'. . . sb'
+			'txt txt txt sb'
+			'rl rl rl .'
+			'ft ft ft ft';
+		width: 90%;
+		height: 100vh;
+		margin: auto;
+	}
+
+	.cover {
+		grid-area: cover;
+	}
+
+	.post-header {
+		grid-area: hd;
+		height: 100%;
+	}
+
+	.content {
+		grid-area: txt;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		margin: 0.2em 2em 0em 2em;
+		padding: 1em;
+		background-color: #fefefe;
+		box-shadow: 1px 2px 5px #bbb;
+		/* border: 1px solid red; */
+	}
+
+	.related-posts-container {
+		grid-area: rl;
+	}
+
+	.footer {
+		grid-area: ft;
+	}
+}
+
+/* Large Screen */
+@media (min-width: 1400px) {
+	.container {
+		width: 95%;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 15% 1fr 20%;
+		grid-template-rows: auto auto auto auto min-content; /*Using 1fr for the first second makes the cards extend outside of their track, need to look at fit-content() or another alternative instead of using percentage value*/
+	}
+
+	.cover {
+		grid-column: 2 / span 2;
+		grid-row: 1 / 2;
+		width: 100%;
+		margin-top: 2em;
+		/* display: inline-block; */
+	}
+
+	.post-header {
+		grid-column: 2 / span 1;
+		grid-row: 2 / span 1;
+	}
+
+	.content {
+		/* border: 1px solid red; */
+		grid-column: 2 / span 1;
+		grid-row: 3 / span 1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		flex-direction: column;
+		margin: 0.2em 2em 0em 2em;
+		padding: 1em;
+		background-color: #fefefe;
+		box-shadow: 1px 2px 5px #bbb;
+	}
+
+	.related-posts-container {
+		grid-column: 2/3;
+		grid-row: 4 / span 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.footer {
+		background-color: black;
+		color: white;
+		grid-column: 1 / span 3;
+		grid-row: 5 / span 1;
+	}
+}

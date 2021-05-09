@@ -1,0 +1,42 @@
+.btn {
+	background-color: #a270ca; /* Green #4caf50 */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 0.3em;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #52a055;
+}
+
+.nav-btn {
+	margin: 2em;
+	align-self: center;
+	/* order: 9; */
+}
+
+.circle {
+	cursor: pointer;
+	background-color: #a270ca;
+	border: 1px solid #a270ca;
+	width: 0.7em;
+	height: 0.7em;
+	margin-left: 1em;
+	border-radius: 100%;
+}
+
+.disable {
+	background-color: white;
+	border: 1px solid #a270ca;
+}
+
+.disable:hover {
+	border: none;
+	background-color: #52a055;
+}
