@@ -84,7 +84,7 @@
 	}
 
 	.nav-icon {
-		display: none !important; /* didn't work without the !important rule, need to dig further on why*/
+		display: none !important; 
 	}
 }
 
