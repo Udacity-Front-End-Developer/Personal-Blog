@@ -43,3 +43,12 @@ p {
 .quote p {
 	padding: 2em;
 }
+
+.underlined {
+	text-decoration: #f00 wavy underline;
+}
+
+.caption {
+	font-size: 1rem;
+	color: #ccc;
+}
