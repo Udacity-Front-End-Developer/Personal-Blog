@@ -30,3 +30,16 @@ p {
 	text-justify: inter-word;
 	margin-top: 0.5em;
 }
+
+/* From MDN's blockquote page */
+.quote p::before {
+	content: '\201C';
+}
+
+.quote p::after {
+	content: '\201D';
+}
+
+.quote p {
+	padding: 2em;
+}
