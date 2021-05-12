@@ -29,9 +29,6 @@
 .card-container:hover #card-read-btn {
 	animation: shake 0.8s;
 	animation-iteration-count: 1;
-	/* color:rgb(32, 156, 80); */
-	/* border-right:1px solid rgb(39, 153, 39); */
-	/* border-left:1px solid rgb(39, 153, 39); */
 	color: #4caf50;
 	border: 1px solid #4caf50;
 	padding: 0.3rem;

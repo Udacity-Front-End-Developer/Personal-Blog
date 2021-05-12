@@ -34,6 +34,7 @@
 		background-image: none !important;
 		font-size: 2em !important;
 		text-shadow: none !important;
+		text-align: center !important;
 	}
 	/* I couldn't figure out a way to add social buttons for this size under the cover title. */
 }

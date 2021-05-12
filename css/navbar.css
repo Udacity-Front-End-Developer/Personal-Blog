@@ -84,7 +84,7 @@
 	}
 
 	.nav-icon {
-		display: none !important; 
+		display: none !important;
 	}
 }
 
@@ -95,6 +95,7 @@
 		align-items: center;
 		justify-content: space-evenly;
 		width: 100%;
+		margin: auto;
 	}
 
 	.navbar {
@@ -103,8 +104,8 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-evenly;
-		height: 3vw;
-		width: 90%;
+		height: 5vw;
+		width: 100%;
 		position: fixed;
 		background-color: #fefefe;
 	}

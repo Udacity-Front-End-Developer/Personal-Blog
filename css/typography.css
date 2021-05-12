@@ -26,7 +26,7 @@ p {
 }
 
 .main-text p {
-	text-align: justify;
+	/* text-align: justify; */
 	text-justify: inter-word;
 	margin-top: 0.5em;
 }
