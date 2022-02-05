@@ -17,8 +17,8 @@ In this project, I've got to start from scratch! To complete the project, I was 
 This project has been evaluated by a Udacity code reviewer according to the Personal Blog Website project specifications below.
 
 <details>
-  <summary>Project specification:</summary>
-![alt text](repo_images/blog-specification.png)
+<summary>Project specification:</summary>
+<img src="repo_images/blog-specification.png"/>
 </details>
 
 # Deployed version at netlify
