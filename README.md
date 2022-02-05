@@ -25,5 +25,5 @@ This project has been evaluated by a Udacity code reviewer according to the Pers
 
 https://ichabod.netlify.app/index.html
 
-- [x]Project reviewed and passed successfully.
-  ![alt text](repo_images/review.png)
+- [x] Project reviewed and passed successfully.
+      ![alt text](repo_images/review.png)
